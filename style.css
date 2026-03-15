@@ -1,0 +1,48 @@
+/* 基础样式重置 */
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: #333;
+}
+
+/* 导航栏样式 */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 欢迎区域 */
+#hero {
+    background: #f4f4f4;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* 关于区域 */
+#about {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
