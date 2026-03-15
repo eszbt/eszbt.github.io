@@ -52,7 +52,7 @@
             </div>
             <div class="service-item">
                 <div class="icon">📝</div>
-                <h3>值班安排</h3>
+                <h3>组织机构</h3>
                 <p>快速查询技术室、机房日常值班表及联系方式。</p>
             </div>
             <div class="service-item">
@@ -67,29 +67,41 @@
             </div>
         </div>
     </section>
-<section class="message-section">
+
+
+<section class="message-section" id="contact">
     <div class="container">
-        <div class="section-title" style="text-align: center; margin-bottom: 40px;">
-            <h2 style="color: #2c3e50; font-size: 32px;">在线留言</h2>
-            <div class="underline" style="width: 50px; height: 4px; background: #c0392b; margin: 15px auto;"></div>
-            <p style="color: #7f8c8d;">期待您的宝贵意见，我们将尽快给您回复</p>
+        <div class="section-title">
+            <h2>在线留言</h2>
+            <div class="underline"></div>
+            <p>您的意见对我们非常重要，请填写下方表单与我们联系。</p>
         </div>
 
-<form action="https://forminit.com/f/5zwajxtjhyg" method="POST" class="message-form">
-    <input type="hidden" name="_charset_" value="utf-8">
-    
-    <input type="hidden" name="_next" value="https://eszbt.github.io/">
+        <form action="https://forminit.com/f/5zwajxtjhyg" method="POST" id="guestbook-form" class="message-form">
+            
+            <div class="form-group">
+                <label for="user_name">您的姓名</label>
+                <input type="text" id="user_name" name="name" placeholder="请输入姓名" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="user_email">电子邮箱</label>
+                <input type="email" id="user_email" name="email" placeholder="example@mail.com" required>
+            </div>
 
+            <div class="form-group">
+                <label for="user_message">留言内容</label>
+                <textarea id="user_message" name="message" rows="5" placeholder="请详细描述您的问题或建议..." required></textarea>
+            </div>
 
-    <div class="form-group">
-        <textarea name="content" placeholder="请详细填写您的留言内容..." required></textarea>
-    </div>
+            <input type="hidden" name="_next" value="https://eszbt.github.io/">
 
-    <button type="submit" class="submit-btn">立即提交留言</button>
-</form>
-
+            <button type="submit" id="submit-btn" class="submit-btn">立即提交留言</button>
+        </form>
     </div>
 </section>
+
+
 
 
 <footer class="footer" id="contact-section">
