@@ -5,6 +5,21 @@
     --primary-color: #007bff;
     --nav-bg: #f8f9fa;
 }
+.download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #28a745; /* 绿色 */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.download-btn:hover {
+    background-color: #218838; /* 鼠标悬停时颜色变深 */
+}
 
 /* 深色模式变量 */
 body.dark-mode {
