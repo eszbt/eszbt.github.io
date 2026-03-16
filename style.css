@@ -6,12 +6,16 @@
 }
 html {
     scroll-behavior: smooth; /* 开启全局平滑滚动 */
+ font-size: 16px; /* 强制统一基准 */
 }
+
 body {
     font-family: "Microsoft YaHei", sans-serif;
     margin: 0;
     color: #333;
     background-color: var(--white);
+    font-size: 1rem; /* 16px */
+    -webkit-text-size-adjust: 100%; /* 防止移动端自动调整字号 */
 }
 
 .container {
