@@ -31,25 +31,68 @@ body {
     z-index: 1000;
 }
 
-.header .container {
+/* 头部容器改为三部分布局 */
+.header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* 左右两端分布 */
     align-items: center;
-    height: 80px;
+    height: 100px; /* 根据 Logo 高度调整 */
 }
 
-.logo {
-    font-size:30px;
-    font-weight: bold;
-    color: var(--primary-color);
+/* 左侧占位符和右侧导航平分剩余空间，确保 Logo 居中 */
+.header-left, .nav {
+    flex: 1; 
 }
 
+/* 导航链接强制靠右 */
 .nav ul {
     display: flex;
+    justify-content: flex-end; /* 关键：让列表靠右对齐 */
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav ul li { margin-left: 30px; }
+.nav ul li {
+    margin-left: 30px;
+}
+
+/* Logo 容器：改为左右水平排列 */
+.logo {
+    flex: 0 0 auto; /* 保持 Logo 原始大小 */
+    display: flex;
+    flex-direction: row; /* 关键：确保图片和文字在同一行 */
+    align-items: center; /* 垂直居中对齐 */
+    text-align: left;
+}
+
+.logo img {
+    height: 60px; /* 根据实际视觉效果调整高度 */
+    margin-right:60px; /* 图片与文字之间的间距 */
+    margin-bottom: 0; /* 清除之前上下布局时的底边距 */
+}
+
+.logo span {
+    font-size: 50px; /* 适当调整字号 */
+    font-weight: bold;
+    color: var(--primary-color);
+    white-space: nowrap; /* 确保文字不会因为空间不足而换行 */
+    letter-spacing: 1px; /* 增加一点字间距，更有质感 */
+}
+
+
+/* 移动端适配：手机上空间不足，改为垂直排列 */
+@media (max-width: 992px) {
+    .header-content {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+    .header-left { display: none; }
+    .nav { width: 100%; margin-top: 15px; }
+    .nav ul { justify-content: center; } /* 手机上导航居中显示 */
+}
+
 
 .nav a {
     text-decoration: none;
